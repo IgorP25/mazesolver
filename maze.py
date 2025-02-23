@@ -75,12 +75,16 @@ class Maze():
             not_visited.remove(direction)
             if direction == left:
                 self._cells[i][j].has_left_wall = False
+                self._cells[direction[0]][direction[1]].has_right_wall = False
             elif direction == right:
                 self._cells[i][j].has_right_wall = False
+                self._cells[direction[0]][direction[1]].has_left_wall = False
             elif direction == top:
                 self._cells[i][j].has_top_wall = False
+                self._cells[direction[0]][direction[1]].has_bottom_wall = False
             elif direction == bottom:
                 self._cells[i][j].has_bottom_wall = False
+                self._cells[direction[0]][direction[1]].has_top_wall = False
             self._break_walls_r(direction[0], direction[1])
 
     def _reset_cells_visited(self):
@@ -96,7 +100,7 @@ class Maze():
             sleep(0.05 / speed)
 
     def solve(self):
-        self._solve_r(0,0)
+        return self._solve_r(0,0)
 
     def _solve_r(self, i, j):
         self._animate(5)
