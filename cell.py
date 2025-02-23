@@ -57,5 +57,5 @@ class Cell():
         l1 = Line(p1, p2)
         line_color = "red"
         if undo:
-            line_color = "gray"
+            line_color = "#ddd"
         self._win.draw_line(l1, line_color)
