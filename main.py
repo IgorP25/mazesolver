@@ -6,11 +6,11 @@ from timeit import default_timer as timer
 def main():
     seed = None
     algorithm = "a_star" # "a_star" | "depth_first" (default)
-    num_rows = 19
-    num_cols = 26
+    num_rows = 20
+    num_cols = 32
     margin = 10
-    screen_x = 800
-    screen_y = 600
+    screen_x = 1920
+    screen_y = 1200
     cell_size_x = (screen_x - 2 * margin) / num_cols
     cell_size_y = (screen_y - 2 * margin) / num_rows
 
